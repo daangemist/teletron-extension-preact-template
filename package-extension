@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+VERSION=$1
+if [ "$VERSION" = "" ]; then echo "VERSION is not set" && exit 2; else echo "version is '$VERSION'."; fi
+
+echo "Building backend."
+cd backend && npm run build
+echo "Building web."
+cd ../web && npm run build
+
+cd ..
+
+# The output of microbundle also contains the index.d.ts and folders. Those are not needed, only the .css, .map and .js files.
+# So what follows is some scripting to only keep those files.
+mkdir backend/build/web-temp
+mv backend/build/web/{*.js,*.css,*.map} backend/build/web-temp
+rm -rf backend/build/web
+mv backend/build/web-temp backend/build/web
+
+cd backend && tar -cvzf "./__name__-${VERSION}.tar.gz" build package.json package-lock.json && cd ..
+
+echo "Build available at: backend/__name__-${VERSION}.tar.gz"

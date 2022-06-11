@@ -1,0 +1,6 @@
+{
+  "ignore": ["node_modules", "/build/web"],
+  "watch": ["/build"],
+  "ext": "js",
+  "delay": 1500
+}

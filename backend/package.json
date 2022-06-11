@@ -1,0 +1,47 @@
+{
+  "name": "extension-__name__",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint --ext=.ts ./src ./tests",
+    "lint:fix": "eslint --ext=.ts --fix ./src ./tests",
+    "format": "prettier --check ./src ./tests",
+    "format:fix": "prettier --write ./src ./tests"
+  },
+  "main": "build/index.js",
+  "teletron": {
+    "name": "__name__",
+    "displayName": "__name__"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+      "unicorn"
+    ],
+    "rules": {
+      "unicorn/filename-case": "error",
+      "@typescript-eslint/ban-ts-comment": [
+        "error",
+        {
+          "ts-expect-error": "allow-with-description",
+          "ts-ignore": "allow-with-description",
+          "ts-nocheck": "allow-with-description",
+          "ts-check": "allow-with-description"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/express": "^4.17.13",
+    "eslint-plugin-unicorn": "^36.0.0",
+    "teletron": "^0.5.1"
+  },
+  "dependencies": {
+    "debug": "^4.3.3"
+  }
+}
