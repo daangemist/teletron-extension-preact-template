@@ -4,8 +4,9 @@ This is the template for building a teletron extension.
 
 # Getting started
 
-1. Copy the contents to a new folder.
+1. Copy the contents of this repository to an empty folder (do not include the `.git` folder)
 2. Search & replace `__name__` in all files with the name of the extension you are building.
+3. Replace the **name** in the title of this file.
 
 # Development
 
