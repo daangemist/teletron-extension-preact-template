@@ -1,9 +1,5 @@
 {
   "name": "__name__-monorepo",
-  "workspaces": [
-    "backend",
-    "web"
-  ],
   "scripts": {
     "build": "npm run build --workspaces",
     "format": "npm run format --workspaces",

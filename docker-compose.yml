@@ -25,8 +25,8 @@ services:
     build: .docker
     environment:
       - PORT=80
+      - DEBUG=teletron:extension:__name__:*
     volumes:
-      - ./backend:/build:ro
-      - .docker/config:/config
+      - ./backend:/build-extension:ro      
     ports:
       - 1115:80

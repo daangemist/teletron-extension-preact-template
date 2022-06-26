@@ -1,0 +1,10 @@
+{
+  "name": "extension-__name__",
+  "extensions": [
+    {
+      "installationName": "extension-__name__",
+      "path": "../build-extension"
+    }
+  ],
+  "data": {}
+}

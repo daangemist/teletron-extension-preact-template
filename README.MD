@@ -7,6 +7,7 @@ This is the template for building a teletron extension.
 1. Copy the contents of this repository to an empty folder (do not include the `.git` folder)
 2. Search & replace `__name__` in all files with the name of the extension you are building.
 3. Replace the **name** in the title of this file.
+4. Update the README
 
 # Development
 
@@ -20,6 +21,10 @@ Run `docker-compose up` two start three environments:
 
 Instead of `preact/hooks` you should use `preactHooks`, this is because of the shared script
 that is loaded within teletron, which is exposed as `preactHooks`.
+
+When importing a module for web, if you want to have it inlined into the bundle, add it as a
+dev dependency in your `package.json`. For more details, read
+(How Microbundle decides which dependencies to bundle)[https://github.com/developit/microbundle/wiki/How-Microbundle-decides-which-dependencies-to-bundle]
 
 ## Build / package
 

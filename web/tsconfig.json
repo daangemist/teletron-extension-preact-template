@@ -10,13 +10,14 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
     "paths": {
-      "@backend/*": ["../backend/src/*"],
-      "@app/*": ["src/*"],
       "react": ["./node_modules/preact/compat/"],
       "react-dom": ["./node_modules/preact/compat/"]
     }
   },
-  "include": ["src/**/*", "tests/**/*", "node_modules/microbundle/index.d.ts", "src/types/preact-hooks.d.ts"]
+  "include": [
+    "src/**/*",
+    "node_modules/microbundle/index.d.ts",
+    "src/types/preact-hooks.d.ts"
+  ]
 }
