@@ -41,7 +41,7 @@
     "@types/jest": "^26.0.15",
     "eslint-config-preact": "^1.1.3",
     "eslint-plugin-unicorn": "^36.0.0",
-    "microbundle": "^0.13.0",
+    "microbundle": "^0.15.0",
     "nodemon": "^2.0.12",
     "teletron": "^0.5.1",
     "typescript": "^4.1.3"
