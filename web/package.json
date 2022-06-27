@@ -41,7 +41,7 @@
     "eslint-plugin-unicorn": "^36.0.0",
     "microbundle": "^0.15.0",
     "nodemon": "^2.0.12",
-    "teletron": "^0.5.1",
+    "teletron": "^0.7.1",
     "typescript": "^4.1.3"
   }
 }
