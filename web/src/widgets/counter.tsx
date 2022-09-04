@@ -1,6 +1,6 @@
 import { h, FunctionComponent } from 'preact';
 import { TeletronPropsWidget } from 'teletron';
-import { useState } from 'preactHooks';
+import { useState } from 'preact/hooks';
 
 interface Props extends TeletronPropsWidget {
   start: number;

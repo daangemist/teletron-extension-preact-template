@@ -1,4 +1,4 @@
-FROM ghcr.io/daangemist/teletron:0.7.0
+FROM ghcr.io/daangemist/teletron:0.9.2
 
 WORKDIR /app
 RUN npm i nodemon

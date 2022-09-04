@@ -1,6 +1,6 @@
 # **name** extension
 
-This is the template for building a teletron extension.
+This is the template for building a teletron extension using preact.
 
 # Getting started
 
@@ -18,9 +18,6 @@ Run `docker-compose up` two start three environments:
 3. An environment that watches any changes to the web code
 
 ## Gotcha's
-
-Instead of `preact/hooks` you should use `preactHooks`, this is because of the shared script
-that is loaded within teletron, which is exposed as `preactHooks`.
 
 When importing a module for web, if you want to have it inlined into the bundle, add it as a
 dev dependency in your `package.json`. For more details, read

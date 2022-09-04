@@ -15,9 +15,5 @@
       "react-dom": ["./node_modules/preact/compat/"]
     }
   },
-  "include": [
-    "src/**/*",
-    "node_modules/microbundle/index.d.ts",
-    "src/types/preact-hooks.d.ts"
-  ]
+  "include": ["src/**/*", "node_modules/microbundle/index.d.ts"]
 }
