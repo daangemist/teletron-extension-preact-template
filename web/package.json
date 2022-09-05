@@ -1,11 +1,11 @@
 {
-  "name": "name-web",
+  "name": "__name__-web",
   "version": "1.0.0",
   "description": "",
   "source": "src/index.ts",
   "scripts": {
-    "watch": "microbundle watch --css external --globals --alias react=preact/compat -o ../backend/build/web/__name__.js -f umd",
-    "build": "microbundle build --css external --globals --alias react=preact/compat -o ../backend/build/web/__name__.js -f umd",
+    "watch": "microbundle watch --css external --alias react=preact/compat -o ../backend/build/web/__name__.js -f umd",
+    "build": "microbundle build --css external --alias react=preact/compat -o ../backend/build/web/__name__.js -f umd",
     "lint": "eslint --ext=.tsx,.ts ./src ./tests",
     "lint:fix": "eslint --ext=.tsx,.ts --fix ./src ./tests",
     "format": "prettier --check ./src ./tests",
