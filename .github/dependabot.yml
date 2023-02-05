@@ -8,17 +8,21 @@ updates:
   - package-ecosystem: 'npm' # See documentation for possible values
     directory: '/backend' # Location of package manifests
     schedule:
-      interval: 'daily'
-    ignore:
-      - dependency-name: 'eslint'
-      - dependency-name: '@types/node'
-      - dependency-name: '@typescript-eslint/eslint-plugin'
+      interval: 'weekly'
+    allow:
+      - dependency-type: production
+
+  - package-ecosystem: 'npm' # See documentation for possible values
+    directory: '/' # Location of package manifests
+    schedule:
+      interval: 'weekly'
+    allow:
+      - dependency-type: production
 
   - package-ecosystem: 'npm'
     directory: '/web'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
     ignore:
-      - dependency-name: 'eslint'
-      - dependency-name: '@types/node'
-      - dependency-name: '@typescript-eslint/eslint-plugin'
+      - dependency-name: 'eslint-config-preact'
+      - dependency-name: 'microbundle'
