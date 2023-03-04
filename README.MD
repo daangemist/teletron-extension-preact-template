@@ -25,13 +25,11 @@ dev dependency in your `package.json`. For more details, read
 
 ## Build / package
 
-Run `npm run build` in both `backend` and `web` folders.
+Run:
 
-For convencience, run:
+    ./package-extension
 
-./package-extension `cat backend/package.json | jq -j '.version'`
-
-This will also package the extension in a .tar.gz file, with the version number
+This will package the extension in a .tar.gz file, with the `package.json` and `teletron.json`
 from backend/package.json included. The output file can be found in `backend/`.
 
 ## Rebuild
