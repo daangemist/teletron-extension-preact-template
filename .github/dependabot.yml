@@ -23,6 +23,8 @@ updates:
     directory: '/web'
     schedule:
       interval: 'weekly'
+    allow:
+      - dependency-type: development # because microbundle will bundle only the development packages
     ignore:
       - dependency-name: 'eslint-config-preact'
       - dependency-name: 'microbundle'
