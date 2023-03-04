@@ -1,6 +1,7 @@
 import type { ExtensionManager } from 'teletron';
 import path from 'path';
 import Debug from 'debug';
+import { readFile } from 'node:fs/promises';
 
 const debug = Debug('teletron:extension:__name__');
 
@@ -12,9 +13,13 @@ export default async (teletron: ExtensionManager): Promise<void> => {
     '__name__.umd.js.map',
   ]);
 
+  const teletronJson = JSON.parse(
+    (await readFile(path.join(__dirname, '../teletron.json'))).toString()
+  );
+
   teletron.components.add({
     name: 'hello-world',
-    displayName: 'Hello World',
+    ...teletronJson.components['hello-world'],
     configuration: {
       fields: [
         {
@@ -28,7 +33,7 @@ export default async (teletron: ExtensionManager): Promise<void> => {
   });
   teletron.widgets.add({
     name: 'counter',
-    displayName: 'Counter',
+    ...teletronJson.widgets.counter,
     configuration: {
       fields: [
         {

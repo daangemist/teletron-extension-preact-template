@@ -10,6 +10,10 @@
     "format:fix": "prettier --write ./src ./tests"
   },
   "main": "build/index.js",
+  "author": {
+    "name": "Sam Doe",
+    "url": "https://www.teletron.me"
+  },
   "teletron": {
     "name": "__name__",
     "displayName": "__name__"

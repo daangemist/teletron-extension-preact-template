@@ -1,0 +1,16 @@
+{
+  "components": {
+    "hello-world": {
+      "displayName": "Hello world",
+      "keywords": ["foo", "bar"],
+      "description": "Lorum ipsum"
+    }
+  },
+  "widgets": {
+    "counter": {
+      "displayName": "Counter",
+      "keywords": ["count"],
+      "description": "A simple demo counter."
+    }
+  }
+}
